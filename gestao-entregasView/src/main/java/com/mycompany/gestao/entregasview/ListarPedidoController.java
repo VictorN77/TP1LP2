@@ -81,7 +81,7 @@ public class ListarPedidoController implements Initializable {
 
                 for (Pedido p : pedidos) {
 
-                    if (p.getCliente().getNome() == listaPedidos.getSelectionModel().getSelectedItem()) {
+                    if (p.getCliente().getNome().equals(listaPedidos.getSelectionModel().getSelectedItem())) {
                         selecionado = p;
                     }
                     

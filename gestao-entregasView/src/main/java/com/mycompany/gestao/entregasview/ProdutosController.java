@@ -44,7 +44,7 @@ public class ProdutosController implements Initializable {
     @FXML
     void voltar() throws IOException {
 
-        App.mudaTela("TelaPrincipalGerenteController");
+        App.mudaTela("TelaPrincipalGerente");
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

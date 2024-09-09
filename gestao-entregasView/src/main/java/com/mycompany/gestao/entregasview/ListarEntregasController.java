@@ -53,7 +53,7 @@ public class ListarEntregasController implements Initializable {
 
                 for (Pedido p : entregas) {
 
-                    if (p.getCliente().getNome() == listaEntregas.getSelectionModel().getSelectedItem()) {
+                    if (p.getCliente().getNome().equals(listaEntregas.getSelectionModel().getSelectedItem())) {
                         selecionado = p;
                     }
                     
