@@ -5,7 +5,7 @@
 package com.mycompany.gestao.entregascontroller;
 
 import com.mycompany.gestao.entregasdao.UsuarioDAO;
-import br.cefetmg.gestaoentregasentidades.entities.Usuario;
+import com.mycompany.gestao.entregasentidades.Usuario;
 import java.util.List;
 
 /**

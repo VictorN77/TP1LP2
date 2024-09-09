@@ -5,7 +5,7 @@
 package com.mycompany.gestao.entregasdao;
 
 import com.mycompany.gestao.entregasentidades.Cliente;
-import br.cefetmg.gestaoentregasentidades.entities.Usuario;
+import com.mycompany.gestao.entregasentidades.*;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -60,9 +60,10 @@ public class UsuarioDAO{
     }
 
     public List<Usuario> getAllUsuarios() {
-        EntityManager entityManager = emf.createEntityManager();
-        List<Usuario> usuarios = entityManager.createQuery("SELECT u FROM Usuario u", Usuario.class).getResultList();
-        entityManager.close();
-        return usuarios;
+        //EntityManager entityManager = emf.createEntityManager();
+        //List<Usuario> usuarios = entityManager.createQuery("SELECT u FROM Usuario u", Usuario.class).getResultList();
+      //  entityManager.close();
+       // return usuarios;
+       return null;
     }
 }

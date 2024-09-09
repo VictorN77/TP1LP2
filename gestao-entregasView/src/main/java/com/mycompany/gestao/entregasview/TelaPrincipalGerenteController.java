@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package br.cefetmg.gestaoentregasview;
+package com.mycompany.gestao.entregasview;
 
-import static br.cefetmg.gestaoentregasview.App.mudaTela;
+import com.mycompany.gestao.entregascontroller.*;
+import com.mycompany.gestao.entregasentidades.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,30 +35,30 @@ public class TelaPrincipalGerenteController implements Initializable {
     @FXML
     void sair() throws IOException {
 
-        mudaTela("Login");
+        App.mudaTela("Login");
 
     }
     
     @FXML
     void verProdutos() throws IOException {
     
-        mudaTela("Produtos");
+        App.mudaTela("Produtos");
     }
     @FXML
     void verFuncionarios() throws IOException {
 
-        mudaTela("ListarFuncionarios");
+        App.mudaTela("ListarFuncionarios");
     }
     @FXML
     void verPedidos() throws IOException {
     
-        mudaTela("ListarPedido");
+        App.mudaTela("ListarPedido");
     }
 
     @FXML
     void cadastrarFuncionario() throws IOException {
 
-        mudaTela("CadastroFuncionario");
+        App.mudaTela("CadastroFuncionario");
     }
 
     @Override

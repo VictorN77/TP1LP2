@@ -2,15 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package br.cefetmg.gestaoentregasview;
+package com.mycompany.gestao.entregasview;
 
-import br.cefetmg.gestaoentregascontroller.UsuarioController;
-import br.cefetmg.gestaoentregasentidades.entities.Atendente;
-import br.cefetmg.gestaoentregasentidades.entities.Cliente;
-import br.cefetmg.gestaoentregasentidades.entities.Entregador;
-import br.cefetmg.gestaoentregasentidades.entities.Funcionario;
-import br.cefetmg.gestaoentregasentidades.entities.Usuario;
-import static br.cefetmg.gestaoentregasview.App.mudaTela;
+import com.mycompany.gestao.entregascontroller.*;
+import com.mycompany.gestao.entregasentidades.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -40,7 +35,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void criarConta() throws IOException {
-        mudaTela("CadastroCliente");
+        App.mudaTela("CadastroCliente");
     }
 
     private static Usuario verificaCadastro(String nome, String senha) {
@@ -50,7 +45,7 @@ public class LoginController implements Initializable {
         user.setNome(nome);
         user.setSenha(senha);
         
-        Usuario u = uc.logar(user);
+        Usuario u = (Usuario) uc.logar(user);
         return u;
     }
 
@@ -59,15 +54,15 @@ public class LoginController implements Initializable {
         Usuario u = verificaCadastro(nome.getText(), senha.getText());
         if (u != null) {
             if(u.getTipo().equalsIgnoreCase("administrador"))
-                mudaTela("TelaPrincipalGerente");
+                App.mudaTela("TelaPrincipalGerente");
             else if(u.getTipo().equalsIgnoreCase("atendente"))
                 //-----------------MUDAR DEPOIS------------------
-                mudaTela("ListarEntregas");
+                App.mudaTela("ListarEntregas");
             else if(u.getTipo().equalsIgnoreCase("entregador"))
                 //-----------------MUDAR DEPOIS------------------
-                mudaTela("ListarEntregas");
+                App.mudaTela("ListarEntregas");
             else
-                mudaTela("TelaPrincipalCliente");
+                App.mudaTela("TelaPrincipalCliente");
         }
     }
 

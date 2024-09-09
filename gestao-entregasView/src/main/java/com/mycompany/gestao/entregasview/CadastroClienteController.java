@@ -4,7 +4,6 @@
  */
 package com.mycompany.gestao.entregasview;
 
-import static br.cefetmg.gestaoentregasview.App.mudaTela;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,9 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import br.cefetmg.gestaoentregascontroller.*;
-import br.cefetmg.gestaoentregasentidades.entities.Cliente;
-import br.cefetmg.gestaoentregasentidades.entities.Usuario;
+import com.mycompany.gestao.entregascontroller.*;
+import com.mycompany.gestao.entregasentidades.*;
 
 /**
  * FXML Controller class 
@@ -40,7 +38,7 @@ public class CadastroClienteController implements Initializable {
     @FXML
     void cancelarCadastro() throws IOException{
 
-    mudaTela("Login");
+    App.mudaTela("Login");
 }
     
     @FXML
@@ -68,7 +66,7 @@ public class CadastroClienteController implements Initializable {
        //Cadastrando o cliente como usuario
        uc.addUsuario(userCliente);
        
-       mudaTela("Login");
+       App.mudaTela("Login");
     }
 
     /**
